@@ -24,7 +24,7 @@ These will fit both the Alphacool Apex water block or the passive heatspreader b
 
 Virtually all current server boards follow the ≈8mm c2c pattern within tolerance. The RAM block is designed to be 7.4mm wide, this will very slightly change due to manufacturing error. If you measure between 7.5mm to 8mm on your board, the modules will fit. 
 
-If your DIMMs are further apart than 8mm, you might be able to use the wider heatsink designed for 6 DIMMs, and place it atop 4 RDIMMs. Do NOT use the 4-DIMM version because the mounting screws will not fit the outer modules. If there is be too much overhang, put your exact measurements in a GitHub issue and I should be able to create a version of the model that fits. (Or modify it yourself based on the .step file, and send a PR.)
+If your DIMMs are further apart than 8mm, you might be able to use the wider heatsink designed for 6 DIMMs, and place it atop 4 RDIMMs. Do NOT use the 4-DIMM version because the mounting screws will not fit the outer modules. If there is too much overhang, put your exact measurements in a GitHub issue and I should be able to create a version of the model that fits. (Or modify it yourself based on the .step file, and send a PR.)
 
 This probably goes without saying but absolutely make sure that the block + heatspreader will fit your CPU cooling and case. The heatspreader + thermal pad + block stack adds just under 50mm to your RAM height, and a couple of millimeters to its width. There's no air cooling option that this will fit under. The stack was designed with the exact limits of a 2U case in mind, but never actually tested in one. 
 
@@ -59,8 +59,8 @@ The heatsink as designed has 1.2mm wide fins. You shouldn't get any pushback fro
 - 2x 120mm x 20mm x 0.5mm thermal pad per RDIMM. You can get decent 6W/mK pads for not much more than the cheap 1W/mK stuff. Thermal Grizzly has a line too if there's something burning a hole in your pocket.
 - 1x 100mm x 47mm x 0.5mm thermal pad per 6-RDIMM heatsink. You can cut down a larger piece to this size or combine multiple smaller pieces.
 - 1x 100mm x 31mm x 0.5mm thermal pad per 4-RDIMM heatsink. 
-- 12x M3x8mm non-countersunk coarse screws per 6-RDIMM heatsink.
-- 8x M3x8mm non-countersunk coarse screws per 4-RDIMM heatsink.
+- 12x M3x8 non-countersunk coarse screw per 6-RDIMM heatsink.
+- 8x M3x8 non-countersunk coarse screw per 4-RDIMM heatsink.
 - Optional: ≥14mm wide Kapton tape, see below.
 
 ## Assembly Notes
@@ -106,4 +106,4 @@ DIMMG~L Temp     | 36 degrees C      | ok
 
 [^oneside]: JEDEC requires the maximum module thickness (defined as the height of the PCB plus the height of the tallest component on each side) to be no greater than 4.33mm. The PCB being a nominal 1.27mm and RAM IC height being 2x ≈0.8mm leaves 1.46mm by which side A and side B capacitors can reach above the height of their respective RAM chip planes, combined. In other words, if one side exceeds RAM height by 1.2mm the other side can only exceed it by 0.26mm. (This assumes that RAM packages aren't significantly shorter than 0.8mm, but usually the opposite is true.)
 
-[^squish]: The RAM block `base` has a capacitor cutout depth of 0.9mm which allows for a maximum capacitor height of 2.165mm (measured from the PCB's surface), while the `lid`'s cutout depth of 1.3mm allows for 2.565mm capacitor height. These limits are the absolute unsafe maximum, and cause complete displacement of thermal pad material between the capacitor and RAM block metal surface. MLCCs common on DDR5 RDIMM modules can have exposed electrical contacts on their side that extend all the way to the top. Displacing all insulating thermal pad material will cause these metal pads to contact the block's surface, shorting ground and VCC. The capacitors mounted on the RDIMM must be shorter than these maximum values.
+[^squish]: The RAM block `base` has a capacitor cutout depth of 0.9mm which allows for a maximum capacitor height of 2.165mm (measured from the PCB's surface), while the `lid`'s cutout depth of 1.3mm allows for 2.565mm capacitor height. These limits are the absolute unsafe maximum, and cause complete displacement of thermal pad material between the capacitor and RAM block metal surface. MLCCs common on DDR5 RDIMM modules can have exposed electrical contacts on their side that extend all the way to the top. Displacing all insulating thermal pad material will cause these metal pads to contact the block's surface, shorting ground and VCC. Therefore the capacitors mounted on the RDIMM must be shorter than these maximum values.
