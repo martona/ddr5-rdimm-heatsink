@@ -1,4 +1,4 @@
-# ddr5-rdimm-heatsink
+# ddr5-rdimm-heatsink v2.0.0
 
 Adapted from the excellent https://github.com/galvesribeiro/ddr5-rdimm-heatsink project. The least I could do was keep the incredibly permissive license intact.
 
