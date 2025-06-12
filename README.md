@@ -13,7 +13,7 @@ I wanted to address a couple of things in galvesribeiro's project:
 
 - [`ramblock-body.step`](./ramblock-body.step): The main shell of the RAM block.
 - [`ramblock-lid.step`](./ramblock-lid.step): The lid of the RAM block shell.
-- [`ramblock-threads.pdf`](./ramblock-threads.pdf): Technical drawing for coarse M3 threads.
+- [`ramblock-body.pdf`](./ramblock-body.pdf): Technical drawing for coarse M3 threads.
 
 These will fit both the Alphacool Apex water block or the passive heatspreader below.
 
